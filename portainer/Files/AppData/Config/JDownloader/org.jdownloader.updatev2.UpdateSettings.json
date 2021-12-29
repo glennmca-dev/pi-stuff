@@ -1,0 +1,9 @@
+{
+ "autohideguiiftherearenoupdatesenabled"  : false,
+ "doaskmebeforeinstallinganupdateenabled" : false,
+ "jardiffenabled"                         : true,
+ "lastsuccessfulconnection"               : 1638197917860,
+ "doaskbeforedownloadinganupdate"         : false,
+ "updateinterval"                         : 600000,
+ "autoupdatecheckenabled"                 : true
+}

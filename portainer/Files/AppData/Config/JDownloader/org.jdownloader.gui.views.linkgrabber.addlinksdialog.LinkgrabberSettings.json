@@ -1,0 +1,18 @@
+{
+  "autoextractionenabled" : true,
+  "defaultonaddeddupeslinksaction" : "ASK",
+  "subfolderthreshold" : 0,
+  "autoconfirmmanagerautostart" : "AUTO",
+  "autofilenamecorrectionenabled" : true,
+  "linkgrabberautoconfirmenabled" : false,
+  "autoconfirmmanagerforcedownloads" : false,
+  "autoconfirmdelay" : 15000,
+  "linkgrabberautostartenabled" : true,
+  "autoconfirmmaxdelay" : -1,
+  "subfoldercount" : "NAMES",
+  "defaultonaddedofflinelinksaction" : "ASK",
+  "autoswitchtodownloadtableonconfirmdefaultenabled" : true,
+  "autoconfirmmanagerclearlistafterconfirm" : false,
+  "linkgrabberaddattop" : false,
+  "autoconfirmmanagerassignpriorityenabled" : false
+}

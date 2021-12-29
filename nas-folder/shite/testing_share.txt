@@ -1,0 +1,4 @@
+read:
+This is a test
+write:
+hello mothafucka from pi! :)

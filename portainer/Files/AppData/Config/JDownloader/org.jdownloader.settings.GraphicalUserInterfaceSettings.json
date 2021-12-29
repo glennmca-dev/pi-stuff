@@ -1,0 +1,8 @@
+{
+  "rlywarnlevel" : "NORMAL",
+  "lookandfeeltheme" : "JAVA_SYSTEM",
+  "confirmincompletearchiveaction" : "ASK",
+  "maxsizeunit" : "TiB",
+  "dialogdefaulttimeoutinms" : 20000,
+  "downloadviewrefresh" : 500
+}

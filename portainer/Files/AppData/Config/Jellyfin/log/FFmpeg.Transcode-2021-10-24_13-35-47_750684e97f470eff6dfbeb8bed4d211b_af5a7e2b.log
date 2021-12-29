@@ -1,0 +1,140 @@
+/videos/750684e9-7f47-0eff-6dfb-eb8bed4d211b/hls1/main/0.ts
+
+{"Protocol":0,"Id":"750684e97f470eff6dfbeb8bed4d211b","Path":"/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv","EncoderPath":null,"EncoderProtocol":null,"Type":0,"Container":"mkv,webm","Size":464370145,"Name":"The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta","IsRemote":false,"ETag":"d7a067490ac30381fea58c7bc401739f","RunTimeTicks":25773120000,"ReadAtNativeFramerate":false,"IgnoreDts":false,"IgnoreIndex":false,"GenPtsInput":false,"SupportsTranscoding":true,"SupportsDirectStream":true,"SupportsDirectPlay":true,"IsInfiniteStream":false,"RequiresOpening":false,"OpenToken":null,"RequiresClosing":false,"LiveStreamId":null,"BufferMs":null,"RequiresLooping":false,"SupportsProbing":true,"VideoType":0,"IsoType":null,"Video3DFormat":null,"MediaStreams":[{"Codec":"hevc","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":"bt709","ColorTransfer":"bt709","ColorPrimaries":"bt709","Comment":null,"TimeBase":"1/1000","CodecTimeBase":"1001/24000","Title":null,"VideoRange":"SDR","localizedUndefined":null,"localizedDefault":null,"localizedForced":null,"DisplayTitle":"1080p HEVC SDR","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":1441409,"BitDepth":null,"RefFrames":1,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"Height":1080,"Width":1920,"AverageFrameRate":23.976025,"RealFrameRate":23.976025,"Profile":"Main 10","Type":1,"AspectRatio":"16:9","Index":0,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":"yuv420p10le","Level":120,"IsAnamorphic":null},{"Codec":"eac3","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":"1/48000","Title":null,"VideoRange":null,"localizedUndefined":null,"localizedDefault":null,"localizedForced":null,"DisplayTitle":"English - Dolby Digital\u002B - 6 ch - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":640000,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":6,"SampleRate":48000,"IsDefault":true,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":0,"AspectRatio":null,"Index":1,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"ass","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":"0/1","Title":"English","VideoRange":null,"localizedUndefined":"Undefined","localizedDefault":"Default","localizedForced":"Forced","DisplayTitle":"English - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":2,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":true,"SupportsExternalStream":true,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null}],"MediaAttachments":[],"Formats":[],"Bitrate":2081409,"Timestamp":null,"RequiredHttpHeaders":{},"TranscodingUrl":null,"TranscodingSubProtocol":null,"TranscodingContainer":null,"AnalyzeDurationMs":null,"DefaultAudioStreamIndex":null,"DefaultSubtitleStreamIndex":null}
+
+/usr/lib/jellyfin-ffmpeg/ffmpeg -f matroska,webm -i file:"/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv" -map_metadata -1 -map_chapters -1 -threads 0 -map 0:0 -map 0:1 -map -0:s -codec:v:0 libx264 -pix_fmt yuv420p -preset veryfast -crf 23 -maxrate 6005870 -bufsize 12011740 -profile:v:0 high -level 41 -x264opts:0 subme=0:me_range=4:rc_lookahead=10:me=dia:no_chroma_me:8x8dct=0:partitions=none  -force_key_frames:0 "expr:gte(t,0+n_forced*3)" -vf "scale=trunc(min(max(iw\,ih*dar)\,min(1920\,1080*dar))/2)*2:trunc(min(max(iw/dar\,ih)\,min(1920/dar\,1080))/2)*2" -start_at_zero -vsync -1 -codec:a:0 aac -ac 6 -ab 640000 -copyts -avoid_negative_ts disabled -max_muxing_queue_size 2048 -f hls -max_delay 5000000 -hls_time 3 -hls_segment_type mpegts -start_number 0 -hls_segment_filename "/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f69068%d.ts" -hls_playlist_type vod -hls_list_size 0 -y "/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f69068.m3u8"
+
+
+ffmpeg version 4.3.1-Jellyfin Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-17ubuntu1~20.04)
+  configuration: --prefix=/usr/lib/jellyfin-ffmpeg --target-os=linux --extra-version=Jellyfin --disable-doc --disable-ffplay --disable-shared --disable-libxcb --disable-sdl2 --disable-xlib --enable-gpl --enable-version3 --enable-static --enable-libfontconfig --enable-fontconfig --enable-gmp --enable-gnutls --enable-libass --enable-libbluray --enable-libdrm --enable-libfreetype --enable-libfribidi --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libdav1d --enable-libwebp --enable-libvpx --enable-libx264 --enable-libx265 --enable-libzvbi --enable-libzimg --toolchain=hardened --enable-cross-compile --enable-omx --enable-omx-rpi --enable-mmal --arch=armhf --cross-prefix=/usr/bin/arm-linux-gnueabihf-
+  libavutil      56. 51.100 / 56. 51.100
+  libavcodec     58. 91.100 / 58. 91.100
+  libavformat    58. 45.100 / 58. 45.100
+  libavdevice    58. 10.100 / 58. 10.100
+  libavfilter     7. 85.100 /  7. 85.100
+  libswscale      5.  7.100 /  5.  7.100
+  libswresample   3.  7.100 /  3.  7.100
+  libpostproc    55.  7.100 / 55.  7.100
+Guessed Channel Layout for Input Stream #0.1 : 5.1
+Input #0, matroska,webm, from 'file:/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv':
+  Metadata:
+    ENCODER         : Lavf58.76.100
+  Duration: 00:42:57.31, start: 0.000000, bitrate: 1441 kb/s
+    Stream #0:0(eng): Video: hevc (Main 10), yuv420p10le(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 23.98 fps, 23.98 tbr, 1k tbn, 23.98 tbc (default)
+    Metadata:
+      BPS             : 8987660
+      NUMBER_OF_FRAMES: 61793
+      NUMBER_OF_BYTES : 2895468237
+      _STATISTICS_WRITING_APP: mkvmerge v61.0.0 ('So') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2021-10-22 04:58:13
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      ENCODER         : Lavc58.134.100 libx265
+      DURATION        : 00:42:57.283000000
+    Stream #0:1(eng): Audio: eac3, 48000 Hz, 5.1, fltp (default)
+    Metadata:
+      BPS             : 640000
+      NUMBER_OF_FRAMES: 80541
+      NUMBER_OF_BYTES : 206184960
+      _STATISTICS_WRITING_APP: mkvmerge v61.0.0 ('So') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2021-10-22 04:58:13
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      DURATION        : 00:42:57.312000000
+    Stream #0:2(eng): Subtitle: ass (default)
+    Metadata:
+      title           : English
+      BPS             : 89
+      NUMBER_OF_FRAMES: 842
+      NUMBER_OF_BYTES : 28363
+      _STATISTICS_WRITING_APP: mkvmerge v61.0.0 ('So') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2021-10-22 04:58:13
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      ENCODER         : Lavc58.134.100 ssa
+      DURATION        : 00:42:18.570000000
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (eac3 (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x2641fe0] using SAR=1/1
+[libx264 @ 0x2641fe0] using cpu capabilities: ARMv6 NEON
+[libx264 @ 0x2641fe0] profile Main, level 4.1
+[libx264 @ 0x2641fe0] 264 - core 155 r2917 0a84d98 - H.264/MPEG-4 AVC codec - Copyleft 2003-2018 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x1:0 me=dia subme=0 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=4 chroma_me=0 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=23 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 vbv_maxrate=6005 vbv_bufsize=12011 crf_max=0.0 nal_hrd=none filler=0 ip_ratio=1.40 aq=1:1.00
+Output #0, hls, to '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f69068.m3u8':
+  Metadata:
+    encoder         : Lavf58.45.100
+    Stream #0:0: Video: h264 (libx264), yuv420p, 1920x1080 [SAR 1:1 DAR 16:9], q=-1--1, 23.98 fps, 90k tbn, 23.98 tbc (default)
+    Metadata:
+      encoder         : Lavc58.91.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 6005000/0/0 buffer size: 12011000 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC), 48000 Hz, 5.1, fltp, 640 kb/s (default)
+    Metadata:
+      encoder         : Lavc58.91.100 aac
+frame=    8 fps=0.0 q=0.0 size=N/A time=00:00:00.42 bitrate=N/A speed=0.79x    
+frame=   19 fps= 18 q=0.0 size=N/A time=00:00:00.85 bitrate=N/A speed=0.817x    
+frame=   25 fps= 16 q=28.0 size=N/A time=00:00:01.10 bitrate=N/A speed=0.716x    
+frame=   31 fps= 15 q=28.0 size=N/A time=00:00:01.38 bitrate=N/A speed=0.672x    
+frame=   40 fps= 15 q=28.0 size=N/A time=00:00:01.77 bitrate=N/A speed=0.657x    
+frame=   51 fps= 16 q=28.0 size=N/A time=00:00:02.21 bitrate=N/A speed=0.682x    
+frame=   60 fps= 16 q=28.0 size=N/A time=00:00:02.60 bitrate=N/A speed=0.687x    
+frame=   70 fps= 16 q=28.0 size=N/A time=00:00:03.02 bitrate=N/A speed=0.705x    
+frame=   79 fps= 16 q=28.0 size=N/A time=00:00:03.34 bitrate=N/A speed=0.698x    
+frame=   85 fps= 16 q=28.0 size=N/A time=00:00:03.62 bitrate=N/A speed=0.682x    
+[hls @ 0x2655bf0] Opening '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f690680.ts' for writing
+frame=   96 fps= 16 q=28.0 size=N/A time=00:00:04.11 bitrate=N/A speed=0.702x    
+frame=  108 fps= 17 q=28.0 size=N/A time=00:00:04.56 bitrate=N/A speed=0.717x    
+frame=  114 fps= 16 q=28.0 size=N/A time=00:00:04.84 bitrate=N/A speed=0.696x    
+frame=  121 fps= 16 q=28.0 size=N/A time=00:00:05.14 bitrate=N/A speed=0.689x    
+frame=  129 fps= 16 q=28.0 size=N/A time=00:00:05.48 bitrate=N/A speed=0.685x    
+frame=  138 fps= 16 q=28.0 size=N/A time=00:00:05.84 bitrate=N/A speed=0.686x    
+frame=  148 fps= 16 q=28.0 size=N/A time=00:00:06.22 bitrate=N/A speed=0.689x    
+frame=  158 fps= 17 q=28.0 size=N/A time=00:00:06.67 bitrate=N/A speed=0.699x    
+[hls @ 0x2655bf0] Opening '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f690681.ts' for writing
+frame=  167 fps= 17 q=28.0 size=N/A time=00:00:07.06 bitrate=N/A speed=0.702x    
+frame=  175 fps= 17 q=28.0 size=N/A time=00:00:07.38 bitrate=N/A speed=0.699x    
+frame=  186 fps= 17 q=28.0 size=N/A time=00:00:07.82 bitrate=N/A speed=0.708x    
+frame=  194 fps= 17 q=28.0 size=N/A time=00:00:08.17 bitrate=N/A speed=0.706x    
+frame=  201 fps= 17 q=25.0 size=N/A time=00:00:08.46 bitrate=N/A speed=0.699x    
+frame=  211 fps= 17 q=28.0 size=N/A time=00:00:08.85 bitrate=N/A speed=0.701x    
+frame=  221 fps= 17 q=28.0 size=N/A time=00:00:09.30 bitrate=N/A speed=0.708x    
+frame=  229 fps= 17 q=28.0 size=N/A time=00:00:09.62 bitrate=N/A speed=0.705x    
+[hls @ 0x2655bf0] Opening '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f690682.ts' for writing
+frame=  239 fps= 17 q=28.0 size=N/A time=00:00:10.06 bitrate=N/A speed=0.711x    
+frame=  250 fps= 17 q=28.0 size=N/A time=00:00:10.47 bitrate=N/A speed=0.714x    
+frame=  260 fps= 17 q=28.0 size=N/A time=00:00:10.96 bitrate=N/A speed=0.723x    
+frame=  269 fps= 17 q=28.0 size=N/A time=00:00:11.30 bitrate=N/A speed=0.717x    
+frame=  281 fps= 17 q=28.0 size=N/A time=00:00:11.81 bitrate=N/A speed=0.725x    
+frame=  292 fps= 17 q=28.0 size=N/A time=00:00:12.24 bitrate=N/A speed=0.728x    
+frame=  299 fps= 17 q=28.0 size=N/A time=00:00:12.56 bitrate=N/A speed=0.725x    
+[hls @ 0x2655bf0] Opening '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f690683.ts' for writing
+frame=  309 fps= 17 q=28.0 size=N/A time=00:00:12.97 bitrate=N/A speed=0.726x    
+frame=  314 fps= 17 q=28.0 size=N/A time=00:00:13.20 bitrate=N/A speed=0.719x    
+frame=  323 fps= 17 q=28.0 size=N/A time=00:00:13.54 bitrate=N/A speed=0.717x    
+frame=  331 fps= 17 q=28.0 size=N/A time=00:00:13.90 bitrate=N/A speed=0.717x    
+frame=  338 fps= 17 q=28.0 size=N/A time=00:00:14.18 bitrate=N/A speed=0.712x    
+frame=  346 fps= 17 q=28.0 size=N/A time=00:00:14.50 bitrate=N/A speed=0.708x    
+frame=  355 fps= 17 q=28.0 size=N/A time=00:00:14.86 bitrate=N/A speed=0.708x    
+frame=  364 fps= 17 q=28.0 size=N/A time=00:00:15.25 bitrate=N/A speed=0.709x    
+frame=  370 fps= 17 q=28.0 size=N/A time=00:00:15.53 bitrate=N/A speed=0.704x    
+frame=  376 fps= 17 q=25.0 size=N/A time=00:00:15.76 bitrate=N/A speed=0.699x    
+[hls @ 0x2655bf0] Opening '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f690684.ts' for writing
+frame=  385 fps= 17 q=28.0 size=N/A time=00:00:16.14 bitrate=N/A speed=0.697x    
+frame=  393 fps= 17 q=28.0 size=N/A time=00:00:16.46 bitrate=N/A speed=0.696x    
+frame=  399 fps= 17 q=28.0 size=N/A time=00:00:16.72 bitrate=N/A speed=0.692x    
+[hls @ 0x2655bf0] Opening '/config/data/transcodes/7ed4eb4b90f3a3a7584403cd22f690685.ts' for writing
+frame=  405 fps= 16 q=-1.0 Lsize=N/A time=00:00:16.98 bitrate=N/A speed=0.675x    
+video:2251kB audio:1306kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+[libx264 @ 0x2641fe0] frame I:13    Avg QP:15.47  size: 42626
+[libx264 @ 0x2641fe0] frame P:104   Avg QP:19.29  size: 10619
+[libx264 @ 0x2641fe0] frame B:288   Avg QP:21.71  size:  2242
+[libx264 @ 0x2641fe0] consecutive B-frames:  3.7%  4.0%  1.5% 90.9%
+[libx264 @ 0x2641fe0] mb I  I16..4: 67.6%  0.0% 32.4%
+[libx264 @ 0x2641fe0] mb P  I16..4: 14.5%  0.0%  0.0%  P16..4: 25.5%  0.0%  0.0%  0.0%  0.0%    skip:60.0%
+[libx264 @ 0x2641fe0] mb B  I16..4:  1.1%  0.0%  0.0%  B16..8:  9.0%  0.0%  0.0%  direct: 2.3%  skip:87.6%  L0:37.9% L1:55.6% BI: 6.5%
+[libx264 @ 0x2641fe0] coded y,uvDC,uvAC intra: 17.2% 28.8% 3.6% inter: 1.7% 3.8% 0.0%
+[libx264 @ 0x2641fe0] i16 v,h,dc,p: 46% 25% 10% 19%
+[libx264 @ 0x2641fe0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 20% 24%  3%  7%  4%  4%  4%  5%
+[libx264 @ 0x2641fe0] i8c dc,h,v,p: 59% 17% 18%  6%
+[libx264 @ 0x2641fe0] Weighted P-Frames: Y:1.0% UV:0.0%
+[libx264 @ 0x2641fe0] kb/s:1091.28
+[aac @ 0x2646b40] Qavg: 2908.600

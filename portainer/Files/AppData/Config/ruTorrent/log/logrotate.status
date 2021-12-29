@@ -1,0 +1,7 @@
+logrotate state -- version 2
+"/var/log/acpid.log" 2021-10-25-2:0:0
+"/config/log/nginx/access.log" 2021-11-30-2:0:0
+"/config/log/nginx/rutorrent.rpc2.error.log" 2021-10-25-2:0:0
+"/config/log/nginx/error.log" 2021-10-25-2:0:0
+"/config/log/nginx/rutorrent.rpc2.access.log" 2021-10-25-2:0:0
+"/config/log/php/error.log" 2021-12-26-2:0:0

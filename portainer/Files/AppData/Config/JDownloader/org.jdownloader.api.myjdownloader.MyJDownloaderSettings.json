@@ -1,0 +1,15 @@
+{
+  "uniquedeviceidsaltv2" : "dfaac2de9a8036a305b6de83fe65f37296ef97293e95592cbb04ff6a87df5e67",
+  "autoconnectenabledv2" : true,
+  "debugenabled" : false,
+  "uniquedeviceid" : null,
+  "lastlocalport" : 46051,
+  "latesterror" : "NONE",
+  "manuallocalport" : 3129,
+  "password" : "Laurenb3071",
+  "serverhost" : "api.jdownloader.org",
+  "directconnectmode" : "LAN",
+  "devicename" : "rpi-srv",
+  "uniquedeviceidv2" : "d53231772b83b85a0f24fe85d2aa7bfe",
+  "email" : "glennmcallister96@gmail.com"
+}

@@ -1,0 +1,62 @@
+/videos/750684e9-7f47-0eff-6dfb-eb8bed4d211b/stream.mkv
+
+{"Protocol":0,"Id":"750684e97f470eff6dfbeb8bed4d211b","Path":"/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv","EncoderPath":null,"EncoderProtocol":null,"Type":0,"Container":"mkv,webm","Size":464370145,"Name":"The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta","IsRemote":false,"ETag":"d7a067490ac30381fea58c7bc401739f","RunTimeTicks":25773120000,"ReadAtNativeFramerate":false,"IgnoreDts":false,"IgnoreIndex":false,"GenPtsInput":false,"SupportsTranscoding":true,"SupportsDirectStream":true,"SupportsDirectPlay":true,"IsInfiniteStream":false,"RequiresOpening":false,"OpenToken":null,"RequiresClosing":false,"LiveStreamId":null,"BufferMs":null,"RequiresLooping":false,"SupportsProbing":true,"VideoType":0,"IsoType":null,"Video3DFormat":null,"MediaStreams":[{"Codec":"hevc","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":"bt709","ColorTransfer":"bt709","ColorPrimaries":"bt709","Comment":null,"TimeBase":"1/1000","CodecTimeBase":"1001/24000","Title":null,"VideoRange":"SDR","localizedUndefined":null,"localizedDefault":null,"localizedForced":null,"DisplayTitle":"1080p HEVC SDR","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":1441409,"BitDepth":null,"RefFrames":1,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"Height":1080,"Width":1920,"AverageFrameRate":23.976025,"RealFrameRate":23.976025,"Profile":"Main 10","Type":1,"AspectRatio":"16:9","Index":0,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":"yuv420p10le","Level":120,"IsAnamorphic":null},{"Codec":"eac3","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":"1/48000","Title":null,"VideoRange":null,"localizedUndefined":null,"localizedDefault":null,"localizedForced":null,"DisplayTitle":"English - Dolby Digital\u002B - 6 ch - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":640000,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":6,"SampleRate":48000,"IsDefault":true,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":0,"AspectRatio":null,"Index":1,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"ass","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":"0/1","Title":"English","VideoRange":null,"localizedUndefined":"Undefined","localizedDefault":"Default","localizedForced":"Forced","DisplayTitle":"English - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":2,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":true,"SupportsExternalStream":true,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null}],"MediaAttachments":[],"Formats":[],"Bitrate":2081409,"Timestamp":null,"RequiredHttpHeaders":{},"TranscodingUrl":null,"TranscodingSubProtocol":null,"TranscodingContainer":null,"AnalyzeDurationMs":null,"DefaultAudioStreamIndex":null,"DefaultSubtitleStreamIndex":null}
+
+/usr/lib/jellyfin-ffmpeg/ffmpeg -i file:"/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv" -map 0:0 -map 0:1 -codec:v:0 h264_omx -force_key_frames "expr:gte(t,n_forced*5)" -vf "scale=trunc(min(max(iw\,ih*dar)\,min(1920\,1080*dar))/2)*2:trunc(min(max(iw/dar\,ih)\,min(1920/dar\,1080))/2)*2,subtitles='/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv:si=0'" -copyts -avoid_negative_ts disabled -start_at_zero -b:v 6005870 -maxrate 6005870 -bufsize 12011740 -level 41 -vsync -1 -map_metadata -1 -map_chapters -1 -threads 0 -codec:a:0 ac3 -ac 6 -ab 640000 -y "/config/data/transcodes/f37878959c67dbdab88ebdb2382b915c.mkv"
+
+
+ffmpeg version 4.3.1-Jellyfin Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-17ubuntu1~20.04)
+  configuration: --prefix=/usr/lib/jellyfin-ffmpeg --target-os=linux --extra-version=Jellyfin --disable-doc --disable-ffplay --disable-shared --disable-libxcb --disable-sdl2 --disable-xlib --enable-gpl --enable-version3 --enable-static --enable-libfontconfig --enable-fontconfig --enable-gmp --enable-gnutls --enable-libass --enable-libbluray --enable-libdrm --enable-libfreetype --enable-libfribidi --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libdav1d --enable-libwebp --enable-libvpx --enable-libx264 --enable-libx265 --enable-libzvbi --enable-libzimg --toolchain=hardened --enable-cross-compile --enable-omx --enable-omx-rpi --enable-mmal --arch=armhf --cross-prefix=/usr/bin/arm-linux-gnueabihf-
+  libavutil      56. 51.100 / 56. 51.100
+  libavcodec     58. 91.100 / 58. 91.100
+  libavformat    58. 45.100 / 58. 45.100
+  libavdevice    58. 10.100 / 58. 10.100
+  libavfilter     7. 85.100 /  7. 85.100
+  libswscale      5.  7.100 /  5.  7.100
+  libswresample   3.  7.100 /  3.  7.100
+  libpostproc    55.  7.100 / 55.  7.100
+Guessed Channel Layout for Input Stream #0.1 : 5.1
+Input #0, matroska,webm, from 'file:/data/Movies/The.Blacklist.S09E01.1080p.HEVC.x265-MeGusta.mkv':
+  Metadata:
+    ENCODER         : Lavf58.76.100
+  Duration: 00:42:57.31, start: 0.000000, bitrate: 1441 kb/s
+    Stream #0:0(eng): Video: hevc (Main 10), yuv420p10le(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 23.98 fps, 23.98 tbr, 1k tbn, 23.98 tbc (default)
+    Metadata:
+      BPS             : 8987660
+      NUMBER_OF_FRAMES: 61793
+      NUMBER_OF_BYTES : 2895468237
+      _STATISTICS_WRITING_APP: mkvmerge v61.0.0 ('So') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2021-10-22 04:58:13
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      ENCODER         : Lavc58.134.100 libx265
+      DURATION        : 00:42:57.283000000
+    Stream #0:1(eng): Audio: eac3, 48000 Hz, 5.1, fltp (default)
+    Metadata:
+      BPS             : 640000
+      NUMBER_OF_FRAMES: 80541
+      NUMBER_OF_BYTES : 206184960
+      _STATISTICS_WRITING_APP: mkvmerge v61.0.0 ('So') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2021-10-22 04:58:13
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      DURATION        : 00:42:57.312000000
+    Stream #0:2(eng): Subtitle: ass (default)
+    Metadata:
+      title           : English
+      BPS             : 89
+      NUMBER_OF_FRAMES: 842
+      NUMBER_OF_BYTES : 28363
+      _STATISTICS_WRITING_APP: mkvmerge v61.0.0 ('So') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2021-10-22 04:58:13
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      ENCODER         : Lavc58.134.100 ssa
+      DURATION        : 00:42:18.570000000
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> h264 (h264_omx))
+  Stream #0:1 -> #0:1 (eac3 (native) -> ac3 (native))
+Press [q] to stop, [?] for help
+[Parsed_subtitles_1 @ 0x3ec91c0] Shaper: FriBidi 0.19.7 (SIMPLE) HarfBuzz-ng 2.6.4 (COMPLEX)
+[Parsed_subtitles_1 @ 0x3ec91c0] Using font provider fontconfig
+[h264_omx @ 0x3b910f0] /opt/vc/lib/libbcm_host.so not found
+Error initializing output stream 0:0 -- Error while opening encoder for output stream #0:0 - maybe incorrect parameters such as bit_rate, rate, width or height
+Conversion failed!
